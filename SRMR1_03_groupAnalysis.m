@@ -10,7 +10,7 @@ delete(gcp('nocreate')) % clear parallel pool
 
 %% variables that need to be changed
 % step
-step_number = 12; disp(['step_number = ' step_number])
+step_number = 8; disp(['step_number = ' step_number])
 % sampling rate
 sampling_rate = 1000;
 % subjects
@@ -139,12 +139,12 @@ switch step_number
         for condition = conditions
             isubject = 11; 
             if condition == 2
-                c_axis = [-1 1];
+                c_axis = [-0.5 0.5];
             elseif condition == 3
-                c_axis = [-1 1];
+                c_axis = [-0.5 0.5];
             end
             iscolorbar = true;
-            trial_number = 250;
+            trial_number = 1000;
             is_norm = true;
             figure_singleTrial_cca(condition, srmr_nr, isubject, ...
                 c_axis, iscolorbar, trial_number, is_norm)
